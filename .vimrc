@@ -16,3 +16,4 @@ set wildignore+=*/node_modules/*,*/tmp/*,*/public/* " ignore these folders when 
 set wildmode=list:longest,full
 set clipboard=unnamed " copy from vim paste into system using * register
 set grepprg=rg\ --smart-case\ --vimgrep
+highlight Pmenu ctermbg=245 guibg=245 " change color of autocomplete box
