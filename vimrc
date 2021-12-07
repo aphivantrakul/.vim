@@ -3,7 +3,7 @@ syntax enable " enable syntax and plugins (for netrw)
 filetype plugin on
 set number relativenumber " show relative and absolute line numbers
 set path=.,,,**
-set hidden
+set hidden " allow switch buffers without saving
 set shortmess-=S " count number of search matches
 let g:netrw_fastbrowse = 0
 set t_Co=256 " use 256 colors on the terminal
@@ -21,3 +21,7 @@ set tabstop=2 " 2 spaces for a tab
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+if &diff " turn syntax highlight off when using vimdiff
+  syntax off
+endif
