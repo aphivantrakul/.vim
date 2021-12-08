@@ -25,3 +25,8 @@ set expandtab
 if &diff " turn syntax highlight off when using vimdiff
   syntax off
 endif
+
+" block cursor in normal mode, beam in insert mode (alacritty terminal)
+let &t_SI = "\<Esc>[6 q" " insert mode
+let &t_SR = "\<Esc>[4 q" " replace mode
+let &t_EI = "\<Esc>[0 q" " normal mode
