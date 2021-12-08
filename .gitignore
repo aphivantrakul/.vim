@@ -1,0 +1,7 @@
+# ignore everything
+*
+*/
+
+# do not ignore these files
+!.gitignore
+!vimrc
