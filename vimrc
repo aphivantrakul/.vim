@@ -46,3 +46,4 @@ noremap <Right> <Nop>
 set expandtab
 hi Visual cterm=none ctermbg=251 ctermfg=white
 set nofoldenable
+set title
