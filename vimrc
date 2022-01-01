@@ -51,3 +51,4 @@ set title
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 map <leader>p :CtrlP<CR>
+map <leader>b :CtrlP<CR><c-f>
