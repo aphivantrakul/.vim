@@ -39,31 +39,11 @@ let &t_SR = "\<Esc>[4 q" " replace mode
 let &t_EI = "\<Esc>[0 q" " normal mode
 
 setlocal foldmethod=indent
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 set expandtab
 hi Visual cterm=none ctermbg=251 ctermfg=white
 set nofoldenable
 set title
-
-" Vim Plug
-" Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-" Run PlugInstall if there are missing plugins
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
-
-call plug#begin('~/.vim/plugged')
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-  Plug 'airblade/vim-rooter'
-call plug#end()
-
-nnoremap <SPACE> <Nop>
-let mapleader=" "
-map <leader>f :Files<CR>
-map <leader>b :Buffers<CR>
-map <leader>r :Rg<CR>
