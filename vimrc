@@ -47,3 +47,7 @@ set expandtab
 hi Visual cterm=none ctermbg=251 ctermfg=white
 set nofoldenable
 set title
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+map <leader>p :CtrlP<CR>
