@@ -69,5 +69,7 @@ call plug#end()
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-map <leader>f :Files<CR>
-map <leader>r :Rg<CR>
+map <leader>f :Files!<CR>
+map <leader>r :Rg!<CR>
+
+let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
